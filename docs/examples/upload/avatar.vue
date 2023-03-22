@@ -28,7 +28,7 @@ const handleAvatarSuccess: UploadProps['onSuccess'] = (
 }
 
 const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
-  if (rawFile.type !== 'image/jpeg') {
+  if (rawFile.type !== 'image/jpeg/png') {
     ElMessage.error('Avatar picture must be JPG format!')
     return false
   } else if (rawFile.size / 1024 / 1024 > 2) {
